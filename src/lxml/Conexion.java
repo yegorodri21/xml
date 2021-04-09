@@ -33,6 +33,7 @@ public class Conexion {
             this.open();
             oc.set(objeto);
             this.oc.close();
+            System.out.println(objeto);
             return true;
         } catch(Exception e){
             System.out.println("bdoo.Controador.InsertarPersona(): "+e);
@@ -42,11 +43,11 @@ public class Conexion {
     public void insertarXml(Docente[] d){
         //si el objeto se encuentra ya guardado colocar un mensaje 
         //y si el objeto no se encuentra entonces guardelo al objeto
-        if (d==null){
-            System.out.println("");
-        }else{
-            System.out.println("Este objeto ya se encuentra guardado");
-        }
+//        if (d==null){
+//            System.out.println("");
+//        }else{
+//            System.out.println("Este objeto ya se encuentra guardado");
+//        }
     }
     
     public Docente buscarPersona(Docente objeto){
@@ -89,7 +90,7 @@ public class Conexion {
                     System.out.println("id:"+id);
                     System.out.println("Nombre:"+nombre);
                     System.out.println("username:"+username);
-                    System.out.println("password: " +password);
+                    System.out.println("password: " +password+"\n");
                 }
             }
         }catch (Exception e) {

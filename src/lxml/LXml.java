@@ -5,6 +5,7 @@
  */
 package lxml;
 import java.io.File;
+import java.util.Scanner;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
@@ -18,10 +19,25 @@ import org.w3c.dom.NodeList;
 public class LXml {
 
     public static void main(String[] args) {
+                    Scanner ent=new Scanner (System.in);
+                    String id, nombre,username,password;
+        System.out.println("Docentes existentes:");
         Conexion c= new Conexion();
         Docente [] docentes=null;
         docentes = c.leerXML();
         c.insertarXml(docentes);
-    
+        
+        
+        System.out.println("Ingrese los datos del docente que desea ingresar");
+        System.out.print("Id:");
+        id=ent.next();
+        System.out.print("Nombre:");
+        nombre=ent.next();
+        System.out.print("Username:");
+        username=ent.next();
+        System.out.print("Password: ");
+        password=ent.next();
+    Docente objeto = new Docente (id, nombre, username, password);
+    c.Insertar(objeto);
     }
 }

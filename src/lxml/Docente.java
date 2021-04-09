@@ -18,6 +18,11 @@ public class Docente {
         this.id = id;
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "Docente{" + "nombre=" + nombre + ", username=" + username + ", id=" + id + ", password=" + password + '}';
+    }
     
 
     public String getNombre() {

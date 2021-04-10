@@ -20,12 +20,9 @@ public class LXml {
 
     public static void main(String[] args) {
                     Scanner ent=new Scanner (System.in);
-                    String id, nombre,username,password;
-        System.out.println("Docentes existentes:");
+        String id, nombre,username,password;
         Conexion c= new Conexion();
         Docente [] docentes=null;
-        docentes = c.leerXML();
-        c.insertarXml(docentes);
         
         
         System.out.println("Ingrese los datos del docente que desea ingresar");
@@ -38,6 +35,8 @@ public class LXml {
         System.out.print("Password: ");
         password=ent.next();
     Docente objeto = new Docente (id, nombre, username, password);
-    c.Insertar(objeto);
+    c.leerXML(objeto);
+    
+        
     }
 }

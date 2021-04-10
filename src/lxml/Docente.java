@@ -10,18 +10,19 @@ package lxml;
  * @author Usuario
  */
 public class Docente {
-    String nombre, username,id, password; 
-
-    public Docente(String nombre, String username, String id, String password) {
+    private String id, nombre, username, password; 
+    public Docente( String id, String nombre, String username, String password) {
+        this.id = id;
         this.nombre = nombre;
         this.username = username;
-        this.id = id;
         this.password = password;
     }
 
+    
+
     @Override
     public String toString() {
-        return "Docente{" + "nombre=" + nombre + ", username=" + username + ", id=" + id + ", password=" + password + '}';
+        return "Docente{" + ", id=" + id +  "nombre=" + nombre + ", username=" + username + ", password=" + password +'}';
     }
     
 
